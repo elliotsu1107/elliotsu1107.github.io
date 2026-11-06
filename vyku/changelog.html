@@ -242,7 +242,7 @@ document.documentElement.dataset.theme=v;}catch(e){}})();</script>
   <div class="container">
     <p class="eyebrow">CHANGELOG</p>
     <h1 class="page-title" id="intro-title">更新日志</h1>
-    <p class="lead">这里只列已发布的版本，条目与仓库 CHANGELOG 对应。V0.18.0 尚未发布，因此不在列表中。</p>
+    <p class="lead">这里只列已发布的版本，条目与仓库 CHANGELOG 对应。</p>
   </div>
 </section>
 
@@ -251,6 +251,30 @@ document.documentElement.dataset.theme=v;}catch(e){}})();</script>
     <h2 class="section-title" id="entries-title">已发布版本</h2>
 
     <article class="entry entry--latest">
+      <span class="accent-rule accent-rule--v" aria-hidden="true"></span>
+      <h2 class="entry-title"><span class="entry-version">0.18.1</span><span class="entry-date">2026-11-07</span></h2>
+      <ul>
+        <li>新增「开源许可」页：设置 → 关于现列出应用内全部第三方组件（Flutter 框架与插件）的 BSD / MIT / Apache 许可声明。</li>
+        <li>官方站点上线：elliotsu1107.github.io/vyku，下载页显示真实版本、文件大小、SHA-256 与下载链接。</li>
+        <li>修复按钮继承正文链接下划线、内联代码退回浏览器默认等宽、强调字重过粗三处可见缺陷。</li>
+        <li>深色主题下打印不再出现浅色文字印在白纸上。</li>
+        <li>发版改为 GitHub Actions 自动构建：推送 tag 即自动构建双平台并发布 Release。</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <span class="accent-rule accent-rule--v" aria-hidden="true"></span>
+      <h2 class="entry-title"><span class="entry-version">0.18.0</span><span class="entry-date">2026-10-26</span></h2>
+      <ul>
+        <li>完整迁移到 Clay 视觉体系：暖纸画布、陶土强调、衬线标题与发丝线分层，覆盖 Windows 与 Android。</li>
+        <li>三处前景色校准，逐对通过 WCAG AA 对比度；品牌陶土仍作为每屏唯一的强调色保留。</li>
+        <li>新增静态官网：三语共 18 页，与客户端共用同一套设计令牌，支持打印，全站零外部请求。</li>
+        <li>修复 CSV 导入缺陷，并增加表头校验，避免导出的文件被静默重新导入成乱码。</li>
+      </ul>
+    </article>
+
+
+    <article class="entry">
       <span class="accent-rule accent-rule--v" aria-hidden="true"></span>
       <h2 class="entry-title"><span class="entry-version">0.14.1</span><span class="entry-date">2026-07-20</span></h2>
       <ul>
