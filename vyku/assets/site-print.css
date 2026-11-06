@@ -1,0 +1,6 @@
+/* 打印样式：独立文件，经 <link media="print"> 加载，不参与首屏渲染 */
+/* 兜底：暗色主题下打印必须落回亮色纸面。主机制在 site.js 的 beforeprint/afterprint
+   （临时移除 data-theme="dark"，localStorage 不动）；此处的 color-scheme 防止
+   JS 未执行 / beforeprint 未触发时浏览器仍按暗色画控件与表单，产生浅字白纸。 */
+:root{color-scheme:light}
+@media print{.site-header,.site-footer,.skip-link,.toc{display:none}section{break-inside:avoid-page}}

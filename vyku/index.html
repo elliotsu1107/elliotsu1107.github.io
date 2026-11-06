@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>归屿 Vyku — 家庭数字资产中枢</title>
+<meta name="description" content="归屿是本地优先的家庭数字资产中枢：统一管理设备、账号、订阅、证件与文件，支持附件、到期提醒和加密备份，数据只在本机。">
+<link rel="stylesheet" href="assets/design-tokens.css">
+<link rel="stylesheet" href="assets/components.css">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/site-sections.css">
+<link rel="stylesheet" href="assets/site-print.css" media="print">
+<script>(function(){try{var k='vyku.site.theme',v=localStorage.getItem(k);
+if(v!=='light'&&v!=='dark'){v=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';}
+document.documentElement.dataset.theme=v;}catch(e){}})();</script>
+
+</head>
+<body>
+<svg class="icon-sprite" aria-hidden="true">
+
+  
+  <symbol id="clay-icon-arrow-right" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4" y1="12" x2="20" y2="12"/>
+      <polyline points="14 6 20 12 14 18"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-arrow-up-right" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5.5" y1="18.5" x2="18.5" y2="5.5"/>
+      <polyline points="8.5 5.5 18.5 5.5 18.5 15.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-chevron-down" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-chevron-right" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 6 15 12 9 18"/>
+    </g>
+  </symbol>
+
+  
+  <symbol id="clay-icon-check" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="4 12.5 9 17.5 20 6.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-close" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="6" y1="6" x2="18" y2="18"/>
+      <line x1="18" y1="6" x2="6" y2="18"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-plus" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"/>
+      <line x1="12" y1="5" x2="12" y2="19"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-minus" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-search" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"/>
+      <line x1="16.5" y1="16.5" x2="21" y2="21"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-settings" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10.15 3.29L13.85 3.29L13.68 5.93L15.10 6.52L16.85 4.54L19.46 7.15L17.48 8.90L18.07 10.32L20.71 10.15L20.71 13.85L18.07 13.68L17.48 15.10L19.46 16.85L16.85 19.46L15.10 17.48L13.68 18.07L13.85 20.71L10.15 20.71L10.32 18.07L8.90 17.48L7.15 19.46L4.54 16.85L6.52 15.10L5.93 13.68L3.29 13.85L3.29 10.15L5.93 10.32L6.52 8.90L4.54 7.15L7.15 4.54L8.90 6.52L10.32 5.93Z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-copy" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="8.5" y="8.5" width="11" height="11" rx="2"/>
+      <path d="M14.5 4.5H6.5A2 2 0 0 0 4.5 6.5V14.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-trash" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4.5" y1="7" x2="19.5" y2="7"/>
+      <path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4H13.5A1.5 1.5 0 0 1 15 5.5V7"/>
+      <path d="M6 7V18A2.5 2.5 0 0 0 8.5 20.5H15.5A2.5 2.5 0 0 0 18 18V7"/>
+      <line x1="10" y1="11" x2="10" y2="17"/>
+      <line x1="14" y1="11" x2="14" y2="17"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-edit" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 20L4.5 16L16.5 4L20 7.5L8 19.5L4 20Z"/>
+      <line x1="6.5" y1="14" x2="10" y2="17.5"/>
+    </g>
+  </symbol>
+
+  
+  <symbol id="clay-icon-user" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="7.5" r="4"/>
+      <path d="M19 20.5A7 7 0 0 0 5 20.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-calendar" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3.5" y="5.5" width="17" height="15" rx="2"/>
+      <line x1="3.5" y1="10" x2="20.5" y2="10"/>
+      <line x1="8" y1="3.5" x2="8" y2="7.5"/>
+      <line x1="16" y1="3.5" x2="16" y2="7.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-clock" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8.5"/>
+      <polyline points="12 7 12 12 15 14"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-file" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M13.5 3.5H7.5A2 2 0 0 0 5.5 5.5V18.5A2 2 0 0 0 7.5 20.5H16.5A2 2 0 0 0 18.5 18.5V8.5L13.5 3.5Z"/>
+      <polyline points="13.5 3.5 13.5 8.5 18.5 8.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-folder" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.5 18.5V6.5A2 2 0 0 1 5.5 4.5H9L11.5 7.5H18.5A2 2 0 0 1 20.5 9.5V18.5A2 2 0 0 1 18.5 20.5H5.5A2 2 0 0 1 3.5 18.5Z"/>
+    </g>
+  </symbol>
+
+  
+  <symbol id="clay-icon-download" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 4V15"/>
+      <polyline points="7.5 10.5 12 15 16.5 10.5"/>
+      <path d="M20 17.5V18.5A2 2 0 0 1 18 20.5H6A2 2 0 0 1 4 18.5V17.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-upload" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 15V4"/>
+      <polyline points="7.5 8.5 12 4 16.5 8.5"/>
+      <path d="M20 17.5V18.5A2 2 0 0 1 18 20.5H6A2 2 0 0 1 4 18.5V17.5"/>
+    </g>
+  </symbol>
+
+  
+  <symbol id="clay-icon-info" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8.5"/>
+      <circle cx="12" cy="7.5" r="0.75" fill="currentColor" stroke="none"/>
+      <line x1="12" y1="10.5" x2="12" y2="16.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-alert-triangle" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.5 17L13.5 5A1.75 1.75 0 0 0 10.5 5L3.5 17A1.75 1.75 0 0 0 5 20H19A1.75 1.75 0 0 0 20.5 17Z"/>
+      <line x1="12" y1="8.5" x2="12" y2="13"/>
+      <circle cx="12" cy="15.5" r="0.75" fill="currentColor" stroke="none"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-alert-circle" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8.5"/>
+      <line x1="12" y1="8" x2="12" y2="13.5"/>
+      <circle cx="12" cy="16" r="0.75" fill="currentColor" stroke="none"/>
+    </g>
+  </symbol>
+
+  
+  <symbol id="clay-icon-lightbulb" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.3 1 2.1h5c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-bar-chart" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4.5" y1="20" x2="19.5" y2="20"/>
+      <line x1="8" y1="20" x2="8" y2="12.5"/>
+      <line x1="12" y1="20" x2="12" y2="8"/>
+      <line x1="16" y1="20" x2="16" y2="15.5"/>
+    </g>
+  </symbol>
+
+</svg>
+
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><span lang="zh-Hans">归屿</span> Vyku</a>
+    <div class="nav-scroll" role="group" aria-label="导航条可横向滚动，查看全部项目">
+      <nav class="nav" aria-label="主导航" tabindex="0">
+      <a href="index.html" aria-current="page">首页</a>
+      <a href="features.html">功能说明</a>
+      <a href="docs.html">使用文档</a>
+      <a href="download.html">下载</a>
+      <a href="changelog.html">更新日志</a>
+      <a href="faq.html">常见问题</a>
+      </nav>
+      <span class="nav-hint" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#clay-icon-chevron-right"></use></svg></span>
+    </div>
+    <div class="actions">
+      <div class="lang" role="group" aria-label="语言切换">
+        <a href="index.html" lang="zh-Hans" aria-current="true">简</a>
+        <a href="zh-Hant/index.html" lang="zh-Hant">繁</a>
+        <a href="en/index.html" lang="en">EN</a>
+      </div>
+      <button type="button" class="btn btn-secondary theme-toggle" data-theme-toggle aria-pressed="false" aria-label="主题" data-label="主题" data-light="当前浅色" data-dark="当前深色">
+        <svg width="20" height="20" aria-hidden="true"><use href="#clay-icon-lightbulb"></use></svg>
+        <span>主题</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <p class="eyebrow">LOCAL-FIRST · FAMILY ASSETS</p>
+    <h1 class="display" id="hero-title">家庭资产，安放在你自己的设备上</h1>
+    <p class="lead">归屿把设备、账号、订阅、证件和文件收进一处，为它们附上附件、到期提醒和加密备份。数据只在本机，没有账号，也没有云端上传。</p>
+    <div class="btn-row">
+      <a class="btn btn-accent" href="features.html">查看功能说明</a>
+      <a class="btn btn-secondary" href="docs.html">阅读使用文档</a>
+    </div>
+    <div class="platform-strip">Windows · Android ｜ iOS / macOS 暂停 ｜ 简体中文 · 繁體中文 · English</div>
+  </div>
+</section>
+
+<section class="section" id="values" aria-labelledby="values-title">
+  <div class="container">
+    <h2 class="section-title" id="values-title">三个设计取舍</h2>
+    <div class="grid l-thirds">
+      <article class="card">
+        <h3 class="card-title">本地优先</h3>
+        <p>数据库、附件和备份都留在你的设备上。断网时，资产、提醒和搜索照常工作，功能不因网络降级。</p>
+      </article>
+      <article class="card">
+        <h3 class="card-title">统一归处</h3>
+        <p>实体资产、数字账号和文件资产共用一套字段与附件，续费日期和保修期不再散落在备忘录里。</p>
+      </article>
+      <article class="card">
+        <h3 class="card-title">到期提醒</h3>
+        <p>订阅、域名和保修到期前进入提醒列表，点开即可回到对应资产，处理后可以标记完成。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="assets" aria-labelledby="assets-title">
+  <div class="container">
+    <h2 class="section-title" id="assets-title">三类资产，一套字段</h2>
+    <div class="table-wrap">
+      <table class="spec-table">
+        <thead>
+          <tr><th>类型</th><th>示例</th><th>常用字段</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>实体资产</td><td>手机、电脑、NAS、相机、家电</td><td>购买日期、保修期、存放位置</td></tr>
+          <tr><td>数字资产</td><td>账号、订阅服务、域名、VPS / 服务器</td><td>续费日期、绑定邮箱、到期提醒</td></tr>
+          <tr><td>文件资产</td><td>证件、合同、发票、保修单、保险</td><td>证件号码、有效期、附件</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="boundary" aria-labelledby="boundary-title">
+  <div class="container grid l-split">
+    <div>
+      <h2 class="section-title" id="boundary-title">数据边界</h2>
+      <p>归屿没有账号系统，也没有云同步。第一次启动时，它只在你指定的目录里创建一个 SQLite 数据库和一个附件目录。</p>
+      <p>备份是 AES-256-GCM 加密的单文件包，包含数据库、附件清单、大小和 SHA-256 校验值；恢复前先验证，失败时自动回滚。</p>
+      <p>唯一会联网的动作是版本检查：只访问公开的 GitHub latest release 接口，不上传设备、资产或使用数据。</p>
+    </div>
+    <div class="table-wrap">
+      <table class="spec-table">
+        <thead>
+          <tr><th>项目</th><th>实际行为</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>存储位置</td><td>本机数据目录，见使用文档</td></tr>
+          <tr><td>备份格式</td><td>schema 3 加密单文件，Windows 与 Android 通用</td></tr>
+          <tr><td>上传行为</td><td>不上传数据库、附件或使用数据</td></tr>
+          <tr><td>网络请求</td><td>仅版本检查访问公开接口</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="capabilities" aria-labelledby="capabilities-title">
+  <div class="container">
+    <h2 class="section-title" id="capabilities-title">六项已经实现的能力</h2>
+    <ul class="grid l-thirds check-list">
+      <li>
+        <svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-check"></use></svg>
+        <div><h3 class="sub-title">资产管理</h3><p>新增、编辑、删除与分类，字段随资产类型切换。</p></div>
+      </li>
+      <li>
+        <svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-check"></use></svg>
+        <div><h3 class="sub-title">附件管理</h3><p>拍照或选择文件，入库前后校验 SHA-256，失败时清理残留。</p></div>
+      </li>
+      <li>
+        <svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-check"></use></svg>
+        <div><h3 class="sub-title">到期提醒</h3><p>保修、域名与订阅到期提醒，Android 上支持通知权限恢复。</p></div>
+      </li>
+      <li>
+        <svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-check"></use></svg>
+        <div><h3 class="sub-title">本地搜索</h3><p>在本机数据库中查找资产，不经过网络。</p></div>
+      </li>
+      <li>
+        <svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-check"></use></svg>
+        <div><h3 class="sub-title">加密备份</h3><p>AES-256-GCM 备份，恢复前验证，失败时回滚。</p></div>
+      </li>
+      <li>
+        <svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-check"></use></svg>
+        <div><h3 class="sub-title">导入导出</h3><p>CSV / JSON 明文交换，以及公开稳定版本的版本检查。</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="platforms" aria-labelledby="platforms-title">
+  <div class="container grid l-halves">
+    <div>
+      <h2 class="section-title" id="platforms-title">三种语言</h2>
+      <p>界面提供简体中文、繁體中文和 English，切换后重启仍然保留。</p>
+      <p>文档、更新日志和常见问题在三种语言下结构一致，术语与版本号互相对得上。</p>
+    </div>
+    <div>
+      <h2 class="section-title">两个平台</h2>
+      <p>归屿目前在 Windows 与 Android 上构建和验收。iOS 与 macOS 暂停，不提供工程与安装包。</p>
+      <p>两个平台共用 schema 3 加密备份，可以按加密备份包在设备之间迁移数据。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="release" aria-labelledby="release-title">
+  <div class="container">
+    <h2 class="section-title" id="release-title"><svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-download"></use></svg> 下载</h2>
+    <p><span class="pill pill-neutral">尚未发布</span></p>
+    <p>V0.18.0 仍在开发中，仓库里只有内部调试产物，没有可以直接安装的公开构建。下载页说明了发布后的安装与校验流程，以及当前已知限制。</p>
+    <div class="btn-row">
+      <a class="btn btn-secondary" href="download.html">查看下载说明</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq-entry" aria-labelledby="faq-entry-title">
+  <div class="container">
+    <h2 class="section-title" id="faq-entry-title">先看这三个问题</h2>
+    <div class="grid l-thirds">
+      <a class="card card--link" href="faq.html#platform">
+        <h3 class="card-title">支持哪些平台？</h3>
+        <p class="body-sm">Windows 与 Android；iOS / macOS 暂停。</p>
+      </a>
+      <a class="card card--link" href="faq.html#data">
+        <h3 class="card-title">数据存在哪里？</h3>
+        <p class="body-sm">本机目录里的数据库与附件，不上传。</p>
+      </a>
+      <a class="card card--link" href="faq.html#restore">
+        <h3 class="card-title">换设备怎么办？</h3>
+        <p class="body-sm">用加密备份包迁移，恢复前会验证。</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <p class="footer-name"><span lang="zh-Hans">归屿</span> Vyku</p>
+      <p class="body-sm">本地优先的家庭数字资产中枢，数据只在本机。</p>
+    </div>
+    <nav class="footer-col" aria-labelledby="footer-site">
+      <h2 class="footer-title" id="footer-site">站点</h2>
+      <ul>
+        <li><a href="features.html">功能说明</a></li>
+        <li><a href="docs.html">使用文档</a></li>
+        <li><a href="download.html">下载</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col footer-col--info" aria-labelledby="footer-info">
+      <h2 class="footer-title" id="footer-info">信息</h2>
+      <ul>
+        <li><a href="changelog.html">更新日志</a></li>
+        <li><a href="faq.html">常见问题</a></li>
+        <li><a href="docs.html#restore">备份与恢复</a></li>
+        <li><a href="docs.html#limits">平台与限制</a></li>
+      </ul>
+    </nav>
+    <div class="footer-legal">
+      <span>© 2026 归屿 Vyku</span>
+      <span>预览站点 · V0.18.0 尚未发布</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>

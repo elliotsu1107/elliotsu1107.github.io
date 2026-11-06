@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>使用說明 · 歸嶼 Vyku</title>
+<meta name="description" content="歸嶼的安裝、首次使用、資料位置、備份與還原、附件與提醒、平台與限制說明，並註明最低系統版本的建置設定出處。">
+<link rel="stylesheet" href="../assets/design-tokens.css">
+<link rel="stylesheet" href="../assets/components.css">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/site-sections.css">
+<link rel="stylesheet" href="../assets/site-print.css" media="print">
+<script>(function(){try{var k='vyku.site.theme',v=localStorage.getItem(k);
+if(v!=='light'&&v!=='dark'){v=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';}
+document.documentElement.dataset.theme=v;}catch(e){}})();</script>
+
+</head>
+<body>
+<svg class="icon-sprite" aria-hidden="true">
+
+  
+  <symbol id="clay-icon-arrow-right" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4" y1="12" x2="20" y2="12"/>
+      <polyline points="14 6 20 12 14 18"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-arrow-up-right" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5.5" y1="18.5" x2="18.5" y2="5.5"/>
+      <polyline points="8.5 5.5 18.5 5.5 18.5 15.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-chevron-down" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-chevron-right" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 6 15 12 9 18"/>
+    </g>
+  </symbol>
+
+  
+  <symbol id="clay-icon-check" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="4 12.5 9 17.5 20 6.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-close" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="6" y1="6" x2="18" y2="18"/>
+      <line x1="18" y1="6" x2="6" y2="18"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-plus" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"/>
+      <line x1="12" y1="5" x2="12" y2="19"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-minus" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-search" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"/>
+      <line x1="16.5" y1="16.5" x2="21" y2="21"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-settings" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10.15 3.29L13.85 3.29L13.68 5.93L15.10 6.52L16.85 4.54L19.46 7.15L17.48 8.90L18.07 10.32L20.71 10.15L20.71 13.85L18.07 13.68L17.48 15.10L19.46 16.85L16.85 19.46L15.10 17.48L13.68 18.07L13.85 20.71L10.15 20.71L10.32 18.07L8.90 17.48L7.15 19.46L4.54 16.85L6.52 15.10L5.93 13.68L3.29 13.85L3.29 10.15L5.93 10.32L6.52 8.90L4.54 7.15L7.15 4.54L8.90 6.52L10.32 5.93Z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-copy" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="8.5" y="8.5" width="11" height="11" rx="2"/>
+      <path d="M14.5 4.5H6.5A2 2 0 0 0 4.5 6.5V14.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-trash" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4.5" y1="7" x2="19.5" y2="7"/>
+      <path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4H13.5A1.5 1.5 0 0 1 15 5.5V7"/>
+      <path d="M6 7V18A2.5 2.5 0 0 0 8.5 20.5H15.5A2.5 2.5 0 0 0 18 18V7"/>
+      <line x1="10" y1="11" x2="10" y2="17"/>
+      <line x1="14" y1="11" x2="14" y2="17"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-edit" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 20L4.5 16L16.5 4L20 7.5L8 19.5L4 20Z"/>
+      <line x1="6.5" y1="14" x2="10" y2="17.5"/>
+    </g>
+  </symbol>
+
+  
+  <symbol id="clay-icon-user" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="7.5" r="4"/>
+      <path d="M19 20.5A7 7 0 0 0 5 20.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-calendar" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3.5" y="5.5" width="17" height="15" rx="2"/>
+      <line x1="3.5" y1="10" x2="20.5" y2="10"/>
+      <line x1="8" y1="3.5" x2="8" y2="7.5"/>
+      <line x1="16" y1="3.5" x2="16" y2="7.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-clock" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8.5"/>
+      <polyline points="12 7 12 12 15 14"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-file" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M13.5 3.5H7.5A2 2 0 0 0 5.5 5.5V18.5A2 2 0 0 0 7.5 20.5H16.5A2 2 0 0 0 18.5 18.5V8.5L13.5 3.5Z"/>
+      <polyline points="13.5 3.5 13.5 8.5 18.5 8.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-folder" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.5 18.5V6.5A2 2 0 0 1 5.5 4.5H9L11.5 7.5H18.5A2 2 0 0 1 20.5 9.5V18.5A2 2 0 0 1 18.5 20.5H5.5A2 2 0 0 1 3.5 18.5Z"/>
+    </g>
+  </symbol>
+
+  
+  <symbol id="clay-icon-download" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 4V15"/>
+      <polyline points="7.5 10.5 12 15 16.5 10.5"/>
+      <path d="M20 17.5V18.5A2 2 0 0 1 18 20.5H6A2 2 0 0 1 4 18.5V17.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-upload" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 15V4"/>
+      <polyline points="7.5 8.5 12 4 16.5 8.5"/>
+      <path d="M20 17.5V18.5A2 2 0 0 1 18 20.5H6A2 2 0 0 1 4 18.5V17.5"/>
+    </g>
+  </symbol>
+
+  
+  <symbol id="clay-icon-info" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8.5"/>
+      <circle cx="12" cy="7.5" r="0.75" fill="currentColor" stroke="none"/>
+      <line x1="12" y1="10.5" x2="12" y2="16.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-alert-triangle" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.5 17L13.5 5A1.75 1.75 0 0 0 10.5 5L3.5 17A1.75 1.75 0 0 0 5 20H19A1.75 1.75 0 0 0 20.5 17Z"/>
+      <line x1="12" y1="8.5" x2="12" y2="13"/>
+      <circle cx="12" cy="15.5" r="0.75" fill="currentColor" stroke="none"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-alert-circle" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8.5"/>
+      <line x1="12" y1="8" x2="12" y2="13.5"/>
+      <circle cx="12" cy="16" r="0.75" fill="currentColor" stroke="none"/>
+    </g>
+  </symbol>
+
+  
+  <symbol id="clay-icon-lightbulb" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.3 1 2.1h5c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-bar-chart" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4.5" y1="20" x2="19.5" y2="20"/>
+      <line x1="8" y1="20" x2="8" y2="12.5"/>
+      <line x1="12" y1="20" x2="12" y2="8"/>
+      <line x1="16" y1="20" x2="16" y2="15.5"/>
+    </g>
+  </symbol>
+
+</svg>
+
+<a class="skip-link" href="#main">跳至主要內容</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html"><span lang="zh-Hant">歸嶼</span> Vyku</a>
+    <div class="nav-scroll" role="group" aria-label="導覽列可橫向捲動，檢視全部項目">
+      <nav class="nav" aria-label="主導覽" tabindex="0">
+      <a href="../index.html">首頁</a>
+      <a href="../features.html">功能說明</a>
+      <a href="../docs.html" aria-current="page">使用說明</a>
+      <a href="../download.html">下載</a>
+      <a href="../changelog.html">更新日誌</a>
+      <a href="../faq.html">常見問題</a>
+      </nav>
+      <span class="nav-hint" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#clay-icon-chevron-right"></use></svg></span>
+    </div>
+    <div class="actions">
+      <div class="lang" role="group" aria-label="語言切換">
+        <a href="../docs.html" lang="zh-Hans">简</a>
+        <a href="docs.html" lang="zh-Hant" aria-current="true">繁</a>
+        <a href="../en/docs.html" lang="en">EN</a>
+      </div>
+      <button type="button" class="btn btn-secondary theme-toggle" data-theme-toggle aria-pressed="false" aria-label="主題" data-label="主題" data-light="目前淺色" data-dark="目前深色">
+        <svg width="20" height="20" aria-hidden="true"><use href="#clay-icon-lightbulb"></use></svg>
+        <span>主題</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="section" id="intro" aria-labelledby="intro-title">
+  <div class="container">
+    <p class="eyebrow">DOCS</p>
+    <h1 class="page-title" id="intro-title">使用說明</h1>
+    <p class="lead">從安裝到第一次備份。目前沒有公開建置，安裝步驟在發布後適用；資料位置、備份與限制說明現在就可以對照。</p>
+    <nav class="toc" aria-label="本頁目錄">
+      <a href="#install">安裝</a>
+      <a href="#first-run">首次使用</a>
+      <a href="#data-location">資料位置</a>
+      <a href="#restore">備份與還原</a>
+      <a href="#attachments">附件與提醒</a>
+      <a href="#limits">平台與限制</a>
+    </nav>
+  </div>
+</section>
+
+<section class="section" id="install" aria-labelledby="install-title">
+  <div class="container grid l-split">
+    <div>
+      <h2 class="section-title" id="install-title">安裝</h2>
+      <p><strong>Windows 便攜版</strong>：解壓縮發布包到任意目錄，直接執行 <code>vyku.exe</code>。便攜包內帶 <code>portable.flag</code>，資料寫在程式目錄下的 <code>data</code> 裡，整個資料夾可以一起搬走。</p>
+      <p><strong>Android</strong>：下載發布的安裝檔與同名校驗檔，先核對 SHA-256 再安裝。安裝時只暫時允許目前瀏覽器或檔案管理器「安裝未知應用程式」，完成後恢復禁止安裝設定。</p>
+      <p><strong>最低系統版本</strong>：Android 為 Android 7.0（API 24）。該值取自 <code>dist/V0.18.0-A-android/</code> 內 debug 建置的清單（<code>aapt2 dump badging</code> 輸出 <code>minSdkVersion:'24'</code>），與 <code>android/app/build.gradle.kts:52</code> 的 <code>minSdk = flutter.minSdkVersion</code>（Flutter 預設 24）一致。</p>
+      <p>Windows 方面，專案建置設定沒有宣告最低 Windows 版本（<code>windows/CMakeLists.txt</code> 與 <code>windows/runner</code> 均無版本斷言），因此本站不寫具體版本號，避免給出未經建置設定支援的承諾。</p>
+    </div>
+    <div>
+      <div class="callout co-info">
+        <svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-info"></use></svg>
+        <div>
+          <p><strong>本站為預覽版本</strong></p>
+          <p>目前不提供公開建置。上面的安裝步驟描述發布後的流程，現在沒有可下載的安裝檔。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="first-run" aria-labelledby="first-run-title">
+  <div class="container">
+    <h2 class="section-title" id="first-run-title">首次使用</h2>
+    <ol>
+      <li>啟動後先看到空清單。點新增，選擇實體、數位或檔案類資產。</li>
+      <li>填名稱和類型必填欄位；有到期日的資產順手填上日期。</li>
+      <li>需要留憑證的資產，加入拍照或檔案附件，確認校驗通過。</li>
+      <li>開啟設定，確認主題、語言與資料目錄，記下資料位置。</li>
+      <li>做一次加密備份並另存到裝置之外，作為第一條還原基線。</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="data-location" aria-labelledby="data-location-title">
+  <div class="container">
+    <h2 class="section-title" id="data-location-title">資料位置</h2>
+    <div class="table-wrap">
+      <table class="spec-table">
+        <thead>
+          <tr><th>形態</th><th>位置</th><th>說明</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>便攜版</td><td>程式目錄下的 <code>data</code></td><td>資料跟隨資料夾移動，適合放在外接硬碟。</td></tr>
+          <tr><td>安裝版</td><td>系統應用程式文件目錄</td><td>Windows 通常為「文件」目錄，實際路徑以設定頁為準。</td></tr>
+          <tr><td>資料庫</td><td><code>vyku.sqlite</code></td><td>資產、附件索引與提醒都在這個檔案裡。</td></tr>
+          <tr><td>附件</td><td><code>vault/assets/</code></td><td>原始檔案依內容定址存放，不要在外部改名。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="code-block"><pre>&lt;程式目錄&gt;/data
+vyku.sqlite
+vault/assets/</pre></div>
+  </div>
+</section>
+
+<section class="section" id="restore" aria-labelledby="restore-title">
+  <div class="container grid l-split">
+    <div>
+      <h2 class="section-title" id="restore-title">備份與還原</h2>
+      <ol>
+        <li>在設定裡匯出加密備份，得到一個單一檔案包，副檔名為 <code>.vbk</code>。</li>
+        <li>把備份包另存到裝置之外，並按日期命名，保留最近幾份。</li>
+        <li>還原前選擇備份包，應用程式會先驗證資料庫與附件清單和校驗值。</li>
+        <li>驗證通過才寫入；失敗時回滾到還原前的狀態，原資料不會被破壞。</li>
+      </ol>
+      <p>便攜版與安裝版之間移轉，也走同一條路徑：匯出加密備份，在另一台裝置還原。</p>
+    </div>
+    <div class="table-wrap">
+      <table class="spec-table">
+        <thead>
+          <tr><th>限額</th><th>數值</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>單一加密備份檔案</td><td class="mono">65 MB</td></tr>
+          <tr><td>ZIP 項目數</td><td class="mono">256</td></tr>
+          <tr><td>宣告解壓縮總量</td><td class="mono">64 MB</td></tr>
+          <tr><td>單一項目壓縮率</td><td class="mono">1000×</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="attachments" aria-labelledby="attachments-title">
+  <div class="container grid l-halves">
+    <div>
+      <h2 class="section-title" id="attachments-title">附件</h2>
+      <p>拍照、選圖或選檔案都可以。附件寫入應用程式私有目錄，寫入前後各校驗一次 SHA-256，不一致就清理並回報錯誤。</p>
+      <p>健康檢查會列出缺失檔案、雜湊異常和孤兒檔案，方便你在還原前確認備份包完整。</p>
+    </div>
+    <div>
+      <h2 class="section-title">提醒</h2>
+      <p>資產可以設到期日，首頁按已過期、即將到期和待處理分組；提醒可以跳回對應資產。</p>
+      <p>Android 上第一次建立提醒時按需請求通知權限，權限恢復後會重新排程未到期提醒。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="limits" aria-labelledby="limits-title">
+  <div class="container">
+    <h2 class="section-title" id="limits-title">平台與限制</h2>
+    <div class="callout co-warning">
+      <svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-alert-circle"></use></svg>
+      <div>
+        <p><strong>先確認這幾條</strong></p>
+        <p>歸嶼只在 Windows 與 Android 上建置和驗收；iOS 與 macOS 暫停。它沒有帳號，也沒有雲端同步，資料與備份都需要你自己保管。</p>
+      </div>
+    </div>
+    <ul>
+      <li>iOS 與 macOS 暫停，沒有工程、安裝檔與驗收計畫。</li>
+      <li>沒有帳號、登入與雲端同步，也沒有網頁端資料管理。</li>
+      <li>附件只在應用程式內檢視，不提供線上預覽與瀏覽器開啟。</li>
+      <li>備份沒有雲端副本；遺失備份包等同於遺失資料，請異地另存。</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <p class="footer-name"><span lang="zh-Hant">歸嶼</span> Vyku</p>
+      <p class="body-sm">本機優先的家庭數位資產中樞，資料只在本機。</p>
+    </div>
+    <nav class="footer-col" aria-labelledby="footer-site">
+      <h2 class="footer-title" id="footer-site">站點</h2>
+      <ul>
+        <li><a href="../features.html">功能說明</a></li>
+        <li><a href="../docs.html">使用說明</a></li>
+        <li><a href="../download.html">下載</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col footer-col--info" aria-labelledby="footer-info">
+      <h2 class="footer-title" id="footer-info">資訊</h2>
+      <ul>
+        <li><a href="../changelog.html">更新日誌</a></li>
+        <li><a href="../faq.html">常見問題</a></li>
+        <li><a href="../docs.html#restore">備份與還原</a></li>
+        <li><a href="../docs.html#limits">平台與限制</a></li>
+      </ul>
+    </nav>
+    <div class="footer-legal">
+      <span>© 2026 歸嶼 Vyku</span>
+      <span>預覽站點 · V0.18.0 尚未發布</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

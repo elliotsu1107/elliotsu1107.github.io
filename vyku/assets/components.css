@@ -1,0 +1,120 @@
+/* ============================================================
+   Clay 风格设计系统 — 组件库 components.css v0.14.0
+   依赖：先引入 design-tokens.css，再引入本文件。
+   本文件所有取值均走 var(--*)，禁止硬编码 hex。
+   *** 由项目 core/ 维护，随 skills 组装分发；请勿在消费项目中手改 ***
+   ============================================================ */
+
+/* ---------- 布局工具 ---------- */
+.container{max-width:var(--container);margin:0 auto;padding:0 32px}
+.hairline{border-top:var(--hairline)}
+
+/* ---------- 眉标 / 标签 ---------- */
+/* 眉标是**正文/可读信息**，不是装饰：曾用 --n-500（3.47:1）不合 WCAG AA，改用 --n-600（6.26:1；暗色 7.48:1）。门禁 check_contrast 会复查此搭配。 */
+.eyebrow{font-family:var(--font-mono);font-size:var(--text-caption);letter-spacing:var(--ls-caps);text-transform:uppercase;color:var(--n-600)}
+.chip{font-family:var(--font-mono);font-size:var(--text-ui-sm);letter-spacing:var(--ls-chip);text-transform:uppercase;color:var(--n-600);border:1px solid var(--n-300);border-radius:var(--radius-full);padding:6px 14px}
+.tag-mono{font-family:var(--font-mono);font-size:var(--text-ui-xs);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--n-600);border:1px solid var(--n-300);border-radius:var(--radius-sm);padding:3px 8px}
+
+/* ---------- 按钮（每屏至多一个主按钮；Clay 按钮只给全页唯一关键动作） ---------- */
+.btn{font-family:var(--font-sans);font-size:var(--text-ui);font-weight:500;padding:10px 22px;cursor:pointer;border:none;display:inline-flex;align-items:center;gap:8px;transition:background var(--motion-fast) var(--ease-standard),color var(--motion-fast) var(--ease-standard),border-color var(--motion-fast) var(--ease-standard)}
+.btn-primary{background:var(--slate);color:var(--ivory);border-radius:var(--radius-md)}
+.btn-primary:hover{background:var(--n-700)}
+.btn-signature{background:var(--slate);color:var(--ivory);border-radius:0 0 8px 8px} /* 签名变体：与标准款二选一，不混用 */
+/* clay 填充按钮上的文字必须始终是深墨：--slate 在暗色会变成浅色（2.82:1 不达标），
+   故改用跨主题稳定的 --ink-on-clay（#141413，亮 5.90 / 暗 5.93）。 */
+.btn-accent{background:var(--clay);color:var(--ink-on-clay);border-radius:var(--radius-md)}
+.btn-accent:hover{background:var(--clay-deep)}
+.btn-secondary{background:transparent;color:var(--slate);border:1px solid var(--slate);border-radius:var(--radius-md)}
+.btn-secondary:hover{background:var(--n-150)}
+.btn-ghost{background:transparent;color:var(--n-700);border-radius:var(--radius-md)}
+.btn-ghost:hover{background:var(--n-150)}
+.btn-disabled{background:var(--n-150);color:var(--n-400);border-radius:var(--radius-md);cursor:not-allowed}
+.btn-link{background:none;color:var(--slate);text-decoration:underline;text-underline-offset:4px;padding:4px 2px;font-size:var(--text-ui);font-family:var(--font-sans)}
+.btn-link:hover{color:var(--clay-press)}
+
+/* ---------- 状态徽章（淡底 + 同系文字 + 透明边框 + 实心圆点） ---------- */
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:var(--text-caption);font-weight:500;padding:4px 14px;border-radius:var(--radius-full);border:1px solid}
+.pill::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.pill-success{background:var(--success-bg);color:var(--success-text);border-color:var(--success-border)}
+.pill-warning{background:var(--warning-bg);color:var(--warning-text);border-color:var(--warning-border)}
+.pill-danger{background:var(--danger-bg);color:var(--danger-text);border-color:var(--danger-border)}
+.pill-info{background:var(--info-bg);color:var(--info-text);border-color:var(--info-border)}
+.pill-neutral{background:var(--n-100);color:var(--n-600);border-color:var(--n-150)}
+
+/* ---------- 信息模块 callout（淡底 + 1px 彩色边框 + 线性图标） ---------- */
+.callout{border-radius:var(--radius-lg);padding:20px 22px;border:1px solid;display:flex;gap:14px}
+.callout svg{flex-shrink:0;margin-top:2px}
+.callout h4{font-size:var(--text-ui);font-weight:600;margin-bottom:4px}
+.callout p{font-size:var(--text-body-sm);line-height:var(--lh-body-lg)}
+.co-success{background:var(--success-bg);border-color:var(--success-border)}
+.co-success h4,.co-success p,.co-success svg{color:var(--success-text)}
+.co-warning{background:var(--warning-bg);border-color:var(--warning-border)}
+.co-warning h4,.co-warning p,.co-warning svg{color:var(--warning-text)}
+.co-danger{background:var(--danger-bg);border-color:var(--danger-border)}
+.co-danger h4,.co-danger p,.co-danger svg{color:var(--danger-text)}
+.co-info{background:var(--info-bg);border-color:var(--info-border)}
+.co-info h4,.co-info p,.co-info svg{color:var(--info-text)}
+
+/* ---------- 规划表格（表头 Mono 大写 + 发丝线 + 无竖线无斑马纹） ---------- */
+.plan-table{width:100%;border-collapse:collapse;font-size:var(--text-body-sm);background:var(--n-50);border:1px solid var(--n-150);border-radius:var(--radius-lg);overflow:hidden}
+.plan-table th{font-family:var(--font-mono);font-size:var(--text-ui-xs);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--n-600);text-align:left;padding:12px 16px;border-bottom:1px solid var(--n-300);font-weight:400;background:var(--n-50)}
+.plan-table td{padding:13px 16px;border-bottom:1px solid var(--n-150);color:var(--n-700)}
+.plan-table tbody tr:last-child td{border-bottom:none}
+.plan-table tbody tr:hover{background:var(--n-75)}
+.plan-table .num{font-family:var(--font-mono);font-size:var(--text-ui-num);text-align:right;font-variant-numeric:tabular-nums}
+.progress{display:flex;align-items:center;gap:10px}
+.progress .track{flex:1;height:6px;background:var(--n-150);border-radius:var(--radius-full);overflow:hidden;min-width:60px}
+.progress .fill{height:100%;background:var(--clay);border-radius:var(--radius-full)}
+.progress .pct{font-family:var(--font-mono);font-size:var(--text-ui-sm);color:var(--n-600);width:36px;text-align:right}
+
+/* ---------- 规范数据表（文档内轻量表格） ---------- */
+.spec-table{width:100%;border-collapse:collapse;font-size:var(--text-body-sm)}
+.spec-table th{font-family:var(--font-mono);font-size:var(--text-ui-sm);letter-spacing:var(--ls-mono);text-transform:uppercase;color:var(--n-600);text-align:left;padding:10px 14px;border-bottom:1px solid var(--n-300);font-weight:400}
+.spec-table td{padding:12px 14px;border-bottom:1px solid var(--n-150);color:var(--n-700);vertical-align:top}
+.spec-table tr:last-child td{border-bottom:none}
+.spec-table td.mono,.spec-table th.mono{font-family:var(--font-mono);font-size:var(--text-ui-num)}
+
+/* ---------- 代码块（石墨底 + Ivory 字 + Mono 13px/1.75） ---------- */
+.code-block{background:var(--code-bg);border-radius:var(--radius-lg);padding:24px 28px;overflow-x:auto}
+.code-block pre{font-family:var(--font-mono);font-size:var(--text-code);line-height:var(--lh-code);color:var(--code-fg)}
+.code-block .c-key{color:var(--syntax-key)}
+.code-block .c-str{color:var(--syntax-str)}
+.code-block .c-com{color:var(--syntax-com)}
+.code-block .c-fn{color:var(--syntax-fn)}
+
+/* ---------- 图表卡片与图例 ---------- */
+.chart-card{border:1px solid var(--n-150);border-radius:var(--radius-xl);padding:28px;background:var(--n-50)}
+.chart-card h4{font-size:var(--text-ui);font-weight:600;margin-bottom:4px}
+.chart-card .sub{font-size:var(--text-caption);color:var(--n-600);margin-bottom:20px}
+.chart-legend{display:flex;gap:20px;flex-wrap:wrap;margin-top:16px;font-size:var(--text-caption);color:var(--n-600)}
+.chart-legend span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:9px;height:9px;border-radius:3px;display:inline-block}
+
+/* ---------- 图标格（线性轮廓，强调色不用于图标本体） ---------- */
+.icon-cell{border:1px solid var(--n-150);border-radius:var(--radius-lg);aspect-ratio:1;display:flex;align-items:center;justify-content:center;color:var(--n-700);background:var(--n-50)}
+.icon-cell:hover{border-color:var(--clay);color:var(--clay-deep)}
+
+/* ---------- 纸感步骤卡 ---------- */
+.step-card{border:1px solid var(--n-150);border-radius:var(--radius-xl);padding:26px 24px;background:var(--n-50)}
+.step-card .n{font-family:var(--font-serif);font-size:var(--text-stat);color:var(--clay-deep);line-height:var(--lh-stat)}
+.step-card h4{font-size:var(--text-body);font-weight:600;margin:14px 0 8px}
+.step-card p{font-size:var(--text-body-sm);color:var(--n-600);line-height:var(--lh-body-lg)}
+
+/* ---------- 错误页 404 / 500（表面色阶 + 1px 发丝线分层；Clay 仅供页面唯一主行动） ---------- */
+.error-page{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:60vh;padding:var(--space-9) var(--space-5);background:var(--n-50);color:var(--n-900)}
+.error-code{display:block;font-family:var(--font-serif);font-size:var(--text-display);font-weight:400;line-height:var(--lh-display);letter-spacing:var(--ls-display);color:var(--n-300);margin:0 0 var(--space-4)}
+.error-title{font-family:var(--font-serif);font-size:var(--text-h2);font-weight:600;line-height:var(--lh-h2);color:var(--n-900);margin:0 0 var(--space-3)}
+.error-desc{font-size:var(--text-body-lg);line-height:var(--lh-body-lg);color:var(--n-600);max-width:46ch;margin:0 auto var(--space-6)}
+.error-actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-6);padding-top:var(--space-6);border-top:var(--hairline)}
+/* 500 变体：服务端故障，抬一级表面并用语义警示色区分 */
+.error-page--500{background:var(--n-75)}
+.error-page--500 .error-code{color:var(--danger-text)}
+
+/* ---------- 可访问性（a11y）----------
+   契约：skills/clay-html/references/style-rules.md 自检清单第 3 条 ——
+   全局 :focus-visible 焦点环 + prefers-reduced-motion 关闭动效。
+   与展示页保持同一口径；注意 outline 规则**不改 border-radius**，
+   否则聚焦瞬间会改掉元素自身圆角（如胶囊按钮）造成视觉跳动。 */
+/* 焦点环属非文本 UI，需 ≥3:1：--clay 在亮色画布只有 2.96:1，改用 --clay-press（亮色 5.68:1；暗色 4.11:1）。门禁 check_contrast 会复查此搭配。 */
+:focus-visible{outline:var(--focus-ring-width) solid var(--clay-press);outline-offset:var(--focus-ring-offset)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

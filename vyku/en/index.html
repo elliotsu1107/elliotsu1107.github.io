@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Vyku — a home for your family's digital assets</title>
+<meta name="description" content="Vyku is a local-first home for family digital assets: devices, accounts, subscriptions, documents and files, with attachments, reminders and encrypted backups.">
+<link rel="stylesheet" href="../assets/design-tokens.css">
+<link rel="stylesheet" href="../assets/components.css">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/site-sections.css">
+<link rel="stylesheet" href="../assets/site-print.css" media="print">
+<script>(function(){try{var k='vyku.site.theme',v=localStorage.getItem(k);
+if(v!=='light'&&v!=='dark'){v=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';}
+document.documentElement.dataset.theme=v;}catch(e){}})();</script>
+
+</head>
+<body>
+<svg class="icon-sprite" aria-hidden="true">
+
+  
+  <symbol id="clay-icon-arrow-right" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4" y1="12" x2="20" y2="12"/>
+      <polyline points="14 6 20 12 14 18"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-arrow-up-right" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5.5" y1="18.5" x2="18.5" y2="5.5"/>
+      <polyline points="8.5 5.5 18.5 5.5 18.5 15.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-chevron-down" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-chevron-right" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 6 15 12 9 18"/>
+    </g>
+  </symbol>
+
+  
+  <symbol id="clay-icon-check" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="4 12.5 9 17.5 20 6.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-close" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="6" y1="6" x2="18" y2="18"/>
+      <line x1="18" y1="6" x2="6" y2="18"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-plus" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"/>
+      <line x1="12" y1="5" x2="12" y2="19"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-minus" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-search" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"/>
+      <line x1="16.5" y1="16.5" x2="21" y2="21"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-settings" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10.15 3.29L13.85 3.29L13.68 5.93L15.10 6.52L16.85 4.54L19.46 7.15L17.48 8.90L18.07 10.32L20.71 10.15L20.71 13.85L18.07 13.68L17.48 15.10L19.46 16.85L16.85 19.46L15.10 17.48L13.68 18.07L13.85 20.71L10.15 20.71L10.32 18.07L8.90 17.48L7.15 19.46L4.54 16.85L6.52 15.10L5.93 13.68L3.29 13.85L3.29 10.15L5.93 10.32L6.52 8.90L4.54 7.15L7.15 4.54L8.90 6.52L10.32 5.93Z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-copy" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="8.5" y="8.5" width="11" height="11" rx="2"/>
+      <path d="M14.5 4.5H6.5A2 2 0 0 0 4.5 6.5V14.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-trash" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4.5" y1="7" x2="19.5" y2="7"/>
+      <path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4H13.5A1.5 1.5 0 0 1 15 5.5V7"/>
+      <path d="M6 7V18A2.5 2.5 0 0 0 8.5 20.5H15.5A2.5 2.5 0 0 0 18 18V7"/>
+      <line x1="10" y1="11" x2="10" y2="17"/>
+      <line x1="14" y1="11" x2="14" y2="17"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-edit" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 20L4.5 16L16.5 4L20 7.5L8 19.5L4 20Z"/>
+      <line x1="6.5" y1="14" x2="10" y2="17.5"/>
+    </g>
+  </symbol>
+
+  
+  <symbol id="clay-icon-user" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="7.5" r="4"/>
+      <path d="M19 20.5A7 7 0 0 0 5 20.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-calendar" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3.5" y="5.5" width="17" height="15" rx="2"/>
+      <line x1="3.5" y1="10" x2="20.5" y2="10"/>
+      <line x1="8" y1="3.5" x2="8" y2="7.5"/>
+      <line x1="16" y1="3.5" x2="16" y2="7.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-clock" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8.5"/>
+      <polyline points="12 7 12 12 15 14"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-file" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M13.5 3.5H7.5A2 2 0 0 0 5.5 5.5V18.5A2 2 0 0 0 7.5 20.5H16.5A2 2 0 0 0 18.5 18.5V8.5L13.5 3.5Z"/>
+      <polyline points="13.5 3.5 13.5 8.5 18.5 8.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-folder" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.5 18.5V6.5A2 2 0 0 1 5.5 4.5H9L11.5 7.5H18.5A2 2 0 0 1 20.5 9.5V18.5A2 2 0 0 1 18.5 20.5H5.5A2 2 0 0 1 3.5 18.5Z"/>
+    </g>
+  </symbol>
+
+  
+  <symbol id="clay-icon-download" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 4V15"/>
+      <polyline points="7.5 10.5 12 15 16.5 10.5"/>
+      <path d="M20 17.5V18.5A2 2 0 0 1 18 20.5H6A2 2 0 0 1 4 18.5V17.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-upload" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 15V4"/>
+      <polyline points="7.5 8.5 12 4 16.5 8.5"/>
+      <path d="M20 17.5V18.5A2 2 0 0 1 18 20.5H6A2 2 0 0 1 4 18.5V17.5"/>
+    </g>
+  </symbol>
+
+  
+  <symbol id="clay-icon-info" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8.5"/>
+      <circle cx="12" cy="7.5" r="0.75" fill="currentColor" stroke="none"/>
+      <line x1="12" y1="10.5" x2="12" y2="16.5"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-alert-triangle" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.5 17L13.5 5A1.75 1.75 0 0 0 10.5 5L3.5 17A1.75 1.75 0 0 0 5 20H19A1.75 1.75 0 0 0 20.5 17Z"/>
+      <line x1="12" y1="8.5" x2="12" y2="13"/>
+      <circle cx="12" cy="15.5" r="0.75" fill="currentColor" stroke="none"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-alert-circle" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8.5"/>
+      <line x1="12" y1="8" x2="12" y2="13.5"/>
+      <circle cx="12" cy="16" r="0.75" fill="currentColor" stroke="none"/>
+    </g>
+  </symbol>
+
+  
+  <symbol id="clay-icon-lightbulb" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.3 1 2.1h5c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>
+    </g>
+  </symbol>
+
+  <symbol id="clay-icon-bar-chart" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4.5" y1="20" x2="19.5" y2="20"/>
+      <line x1="8" y1="20" x2="8" y2="12.5"/>
+      <line x1="12" y1="20" x2="12" y2="8"/>
+      <line x1="16" y1="20" x2="16" y2="15.5"/>
+    </g>
+  </symbol>
+
+</svg>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html"><span lang="zh-Hans">归屿</span> Vyku</a>
+    <div class="nav-scroll" role="group" aria-label="Navigation scrolls sideways; scroll to see every item">
+      <nav class="nav" aria-label="Main" tabindex="0">
+      <a href="../index.html" aria-current="page">Home</a>
+      <a href="../features.html">Features</a>
+      <a href="../docs.html">Docs</a>
+      <a href="../download.html">Download</a>
+      <a href="../changelog.html">Changelog</a>
+      <a href="../faq.html">FAQ</a>
+      </nav>
+      <span class="nav-hint" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#clay-icon-chevron-right"></use></svg></span>
+    </div>
+    <div class="actions">
+      <div class="lang" role="group" aria-label="Language">
+        <a href="../index.html" lang="zh-Hans">简</a>
+        <a href="../zh-Hant/index.html" lang="zh-Hant">繁</a>
+        <a href="index.html" lang="en" aria-current="true">EN</a>
+      </div>
+      <button type="button" class="btn btn-secondary theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Theme" data-label="Theme" data-light="Currently light" data-dark="Currently dark">
+        <svg width="20" height="20" aria-hidden="true"><use href="#clay-icon-lightbulb"></use></svg>
+        <span>Theme</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <p class="eyebrow">LOCAL-FIRST · FAMILY ASSETS</p>
+    <h1 class="display" id="hero-title">Your family's assets, kept on your own devices</h1>
+    <p class="lead">Vyku gathers devices, accounts, subscriptions, documents and files in one place, with attachments, expiry reminders and encrypted backups. Everything stays on your machine: no account, no cloud upload.</p>
+    <div class="btn-row">
+      <a class="btn btn-accent" href="features.html">See what it does</a>
+      <a class="btn btn-secondary" href="docs.html">Read the docs</a>
+    </div>
+    <div class="platform-strip">Windows · Android ｜ iOS / macOS paused ｜ Simplified Chinese · Traditional Chinese · English</div>
+  </div>
+</section>
+
+<section class="section" id="values" aria-labelledby="values-title">
+  <div class="container">
+    <h2 class="section-title" id="values-title">Three design choices</h2>
+    <div class="grid l-thirds">
+      <article class="card">
+        <h3 class="card-title">Local-first</h3>
+        <p>The database, attachments and backups stay on your device. Cut the network and assets, reminders and search keep working; nothing downgrades.</p>
+      </article>
+      <article class="card">
+        <h3 class="card-title">One home</h3>
+        <p>Physical assets, digital accounts and document assets share one set of fields and attachments, so renewal dates and warranties stop living in scattered notes.</p>
+      </article>
+      <article class="card">
+        <h3 class="card-title">Expiry reminders</h3>
+        <p>Subscriptions, domains and warranties enter the reminder list before they expire. Open one to jump back to its asset, then mark it done.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="assets" aria-labelledby="assets-title">
+  <div class="container">
+    <h2 class="section-title" id="assets-title">Three asset types, one set of fields</h2>
+    <div class="table-wrap">
+      <table class="spec-table">
+        <thead>
+          <tr><th>Type</th><th>Examples</th><th>Typical fields</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Physical assets</td><td>Phones, computers, NAS, cameras, appliances</td><td>Purchase date, warranty, storage location</td></tr>
+          <tr><td>Digital assets</td><td>Accounts, subscriptions, domains, VPS / servers</td><td>Renewal date, linked mailbox, expiry reminder</td></tr>
+          <tr><td>Document assets</td><td>Certificates, contracts, invoices, warranties, insurance</td><td>Document number, valid until, attachments</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="boundary" aria-labelledby="boundary-title">
+  <div class="container grid l-split">
+    <div>
+      <h2 class="section-title" id="boundary-title">Data boundary</h2>
+      <p>Vyku has no account system and no cloud sync. On first launch it creates a SQLite database and an attachment folder inside the directory you choose.</p>
+      <p>Backups are single AES-256-GCM encrypted archives that contain the database, the attachment manifest, sizes and SHA-256 values. A restore verifies first and rolls back on failure.</p>
+      <p>The only network call is an update check: it reads the public GitHub latest release endpoint and never uploads devices, assets or usage data.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="spec-table">
+        <thead>
+          <tr><th>Item</th><th>Actual behaviour</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Storage</td><td>Local data directory, described in the docs</td></tr>
+          <tr><td>Backup format</td><td>Encrypted schema 3 single file, shared by Windows and Android</td></tr>
+          <tr><td>Uploads</td><td>No database, attachment or usage data leaves the device</td></tr>
+          <tr><td>Network calls</td><td>Only the update check reads a public endpoint</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="capabilities" aria-labelledby="capabilities-title">
+  <div class="container">
+    <h2 class="section-title" id="capabilities-title">Six capabilities that already ship</h2>
+    <ul class="grid l-thirds check-list">
+      <li>
+        <svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-check"></use></svg>
+        <div><h3 class="sub-title">Asset management</h3><p>Create, edit, delete and categorise; fields follow the asset type.</p></div>
+      </li>
+      <li>
+        <svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-check"></use></svg>
+        <div><h3 class="sub-title">Attachments</h3><p>Take a photo or pick a file; SHA-256 is verified before and after storage.</p></div>
+      </li>
+      <li>
+        <svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-check"></use></svg>
+        <div><h3 class="sub-title">Expiry reminders</h3><p>Warranties, domains and subscriptions; Android recovers notification permission.</p></div>
+      </li>
+      <li>
+        <svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-check"></use></svg>
+        <div><h3 class="sub-title">Local search</h3><p>Queries the local database, so offline results are identical.</p></div>
+      </li>
+      <li>
+        <svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-check"></use></svg>
+        <div><h3 class="sub-title">Encrypted backup</h3><p>AES-256-GCM archives, verified before restore and rolled back on failure.</p></div>
+      </li>
+      <li>
+        <svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-check"></use></svg>
+        <div><h3 class="sub-title">Import and export</h3><p>CSV and JSON for plain data, plus update checks against public releases.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="platforms" aria-labelledby="platforms-title">
+  <div class="container grid l-halves">
+    <div>
+      <h2 class="section-title" id="platforms-title">Three languages</h2>
+      <p>The interface ships in Simplified Chinese, Traditional Chinese and English, and the choice survives a restart.</p>
+      <p>Documentation, changelog and FAQ keep the same structure in all three languages, with matching terms and version numbers.</p>
+    </div>
+    <div>
+      <h2 class="section-title">Two platforms</h2>
+      <p>Vyku is built and accepted on Windows and Android today. iOS and macOS are paused: no project, no installer and no acceptance plan.</p>
+      <p>Both platforms share the encrypted schema 3 backup, so data can move between devices as a backup archive.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="release" aria-labelledby="release-title">
+  <div class="container">
+    <h2 class="section-title" id="release-title"><svg width="24" height="24" aria-hidden="true"><use href="#clay-icon-download"></use></svg> Download</h2>
+    <p><span class="pill pill-neutral">Not released</span></p>
+    <p>V0.18.0 is still in development. The repository only holds internal debug builds, so there is nothing the public can install. The download page explains how installation and verification will work, plus the current limits.</p>
+    <div class="btn-row">
+      <a class="btn btn-secondary" href="download.html">Read the download notes</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq-entry" aria-labelledby="faq-entry-title">
+  <div class="container">
+    <h2 class="section-title" id="faq-entry-title">Start with these three</h2>
+    <div class="grid l-thirds">
+      <a class="card card--link" href="faq.html#platform">
+        <h3 class="card-title">Which platforms?</h3>
+        <p class="body-sm">Windows and Android; iOS / macOS are paused.</p>
+      </a>
+      <a class="card card--link" href="faq.html#data">
+        <h3 class="card-title">Where does data live?</h3>
+        <p class="body-sm">In a local database and attachment folder; nothing is uploaded.</p>
+      </a>
+      <a class="card card--link" href="faq.html#restore">
+        <h3 class="card-title">Moving to a new device?</h3>
+        <p class="body-sm">Use the encrypted backup archive, verified before restore.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <p class="footer-name"><span lang="zh-Hans">归屿</span> Vyku</p>
+      <p class="body-sm">A local-first home for family digital assets. Data stays on your machine.</p>
+    </div>
+    <nav class="footer-col" aria-labelledby="footer-site">
+      <h2 class="footer-title" id="footer-site">Site</h2>
+      <ul>
+        <li><a href="../features.html">Features</a></li>
+        <li><a href="../docs.html">Docs</a></li>
+        <li><a href="../download.html">Download</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col footer-col--info" aria-labelledby="footer-info">
+      <h2 class="footer-title" id="footer-info">Info</h2>
+      <ul>
+        <li><a href="../changelog.html">Changelog</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../docs.html#restore">Backup and restore</a></li>
+        <li><a href="../docs.html#limits">Platforms and limits</a></li>
+      </ul>
+    </nav>
+    <div class="footer-legal">
+      <span>© 2026 Vyku</span>
+      <span>Preview site · V0.18.0 not released</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
