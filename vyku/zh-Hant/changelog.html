@@ -252,6 +252,17 @@ document.documentElement.dataset.theme=v;}catch(e){}})();</script>
 
     <article class="entry entry--latest">
       <span class="accent-rule accent-rule--v" aria-hidden="true"></span>
+      <h2 class="entry-title"><span class="entry-version">0.19.0</span><span class="entry-date">2026-11-15</span></h2>
+      <ul>
+        <li>分類未識別不再靜默：仍歸入預設分類，但結果明確提示受影響的資料列數。</li>
+        <li>明文 CSV 匯出與匯入改用同一套欄序，自家匯出的檔案可以匯回。</li>
+        <li>免費版 50 筆匯入配額對三個匯入入口一致生效，不再有繞過路徑。</li>
+        <li>匯入失敗提示改稱「第 N 筆資料列」，避免給出對不上的實體行號。</li>
+      </ul>
+    </article>
+
+
+    <article class="entry">
       <h2 class="entry-title"><span class="entry-version">0.18.1</span><span class="entry-date">2026-11-07</span></h2>
       <ul>
         <li>新增「開放原始碼授權」頁：設定 → 關於現列出應用內全部第三方元件（Flutter 框架與外掛）的 BSD / MIT / Apache 授權聲明。</li>

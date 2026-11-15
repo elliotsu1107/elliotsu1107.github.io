@@ -252,6 +252,17 @@ document.documentElement.dataset.theme=v;}catch(e){}})();</script>
 
     <article class="entry entry--latest">
       <span class="accent-rule accent-rule--v" aria-hidden="true"></span>
+      <h2 class="entry-title"><span class="entry-version">0.19.0</span><span class="entry-date">2026-11-15</span></h2>
+      <ul>
+        <li>Unrecognised categories are no longer silent: they still fall back to the default category, but the result now reports how many rows were affected.</li>
+        <li>Plain CSV export and import share one column order, so the app's own export can be imported back.</li>
+        <li>The free-tier 50-row quota now applies to all three import entry points with no bypass.</li>
+        <li>Import error messages now say "data row N" instead of a physical line number that cannot be recovered.</li>
+      </ul>
+    </article>
+
+
+    <article class="entry">
       <h2 class="entry-title"><span class="entry-version">0.18.1</span><span class="entry-date">2026-11-07</span></h2>
       <ul>
         <li>Open-source licences page: Settings → About now lists the BSD / MIT / Apache notices for every bundled third-party component.</li>

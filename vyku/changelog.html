@@ -252,6 +252,17 @@ document.documentElement.dataset.theme=v;}catch(e){}})();</script>
 
     <article class="entry entry--latest">
       <span class="accent-rule accent-rule--v" aria-hidden="true"></span>
+      <h2 class="entry-title"><span class="entry-version">0.19.0</span><span class="entry-date">2026-11-15</span></h2>
+      <ul>
+        <li>分类未识别不再静默：仍归入默认分类，但结果里明确提示受影响的数据行数。</li>
+        <li>明文 CSV 导出与导入改用同一套列序，自家导出的文件可以导回。</li>
+        <li>免费版 50 条导入配额对三个导入入口一致生效，不再有绕过路径。</li>
+        <li>导入失败提示改称「第 N 条数据行」，避免给出对不上的物理行号。</li>
+      </ul>
+    </article>
+
+
+    <article class="entry">
       <h2 class="entry-title"><span class="entry-version">0.18.1</span><span class="entry-date">2026-11-07</span></h2>
       <ul>
         <li>新增「开源许可」页：设置 → 关于现列出应用内全部第三方组件（Flutter 框架与插件）的 BSD / MIT / Apache 许可声明。</li>
