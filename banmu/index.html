@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>半亩词田 · Android 测试版</title>
+<style>
+  :root {
+    --paper: #faf8f2;
+    --ink: #24312a;
+    --muted: #6f7b73;
+    --green: #4f7d5a;
+    --green-deep: #2f5a3b;
+    --line: #e4ded1;
+    --soft: #eef4ea;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    line-height: 1.7;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .brand-mark {
+    width: 40px; height: 40px; border-radius: 12px;
+    background: var(--soft); color: var(--green-deep);
+    display: grid; place-items: center; font-weight: 700;
+  }
+  h1 { font-size: 32px; margin: 0; letter-spacing: 1px; }
+  .sub { color: var(--muted); margin: 4px 0 36px; }
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: 18px;
+    padding: 24px; margin: 16px 0;
+  }
+  .download {
+    display: inline-block; background: var(--green); color: #fff;
+    text-decoration: none; padding: 14px 28px; border-radius: 14px;
+    font-weight: 600; font-size: 16px;
+  }
+  .download:hover { background: var(--green-deep); }
+  .meta { color: var(--muted); font-size: 13px; margin-top: 10px; }
+  h2 { font-size: 18px; margin: 0 0 10px; }
+  ol, ul { margin: 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  code {
+    background: var(--soft); padding: 2px 6px; border-radius: 6px;
+    font-size: 12px; word-break: break-all;
+  }
+  img.shot {
+    width: 100%; max-width: 300px; border-radius: 18px;
+    border: 1px solid var(--line); display: block; margin: 0 auto;
+  }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
+  .muted { color: var(--muted); font-size: 13px; }
+  a { color: var(--green-deep); }
+  footer { margin-top: 36px; color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">
+    <div class="brand-mark">亩</div>
+    <h1>半亩词田</h1>
+  </div>
+  <p class="sub">每天种几个词，浇几个词。给两个孩子做的英语单词打卡 App。</p>
+
+  <div class="card">
+    <h2>Android 测试版 v0.19.0</h2>
+    <p class="muted">4694 词 · 全部本地发音 · 离线可用 · 数据只存本机</p>
+    <a class="download" href="https://github.com/elliotsu1107/banmu-releases/releases/latest">下载 APK</a>
+    <div class="meta">
+      约 74MB · Android 8.0+ · 需要允许安装未知来源应用
+    </div>
+    <div class="meta">
+      校验：<a href="https://github.com/elliotsu1107/banmu-releases/releases/download/v0.19.0/banmu-v0.19.0-android.apk.sha256">SHA-256 文件</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>安装</h2>
+    <ol>
+      <li>手机浏览器打开本页，下载 APK。</li>
+      <li>在系统提示中允许浏览器「安装未知应用」。</li>
+      <li>安装后打开「半亩词田」，创建孩子档案即可开始。</li>
+    </ol>
+    <p class="muted">升级时直接覆盖安装；卸载会删除本机学习数据，重要记录请先在「家长设置 → 备份」里导出。</p>
+  </div>
+
+  <div class="row">
+    <div class="card">
+      <h2>这一版有什么</h2>
+      <ul>
+        <li>每日打卡、FSRS 复习</li>
+        <li>人教小学/初中/高中 + 中考 1600 / 高考 3512</li>
+        <li>词田范围、单元突击</li>
+        <li>跟读录音、家长 PIN、备份恢复</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>说明</h2>
+      <ul>
+        <li>测试版，功能与数据格式可能调整。</li>
+        <li>不联网、不上传学习数据。</li>
+        <li>词表仅限个人学习使用。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="shot" src="screenshot.png" alt="半亩词田今日页">
+    <p class="muted" style="text-align:center;margin:10px 0 0">今日页</p>
+  </div>
+
+  <footer>
+    半亩词田 · 测试版发布页 · 安装包来自 <a href="https://github.com/elliotsu1107/banmu-releases">banmu-releases</a>
+  </footer>
+</div>
+</body>
+</html>
