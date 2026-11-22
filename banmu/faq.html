@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>常见问题 · 半亩词田</title>
+<meta name="description" content="半亩词田的常见问题：数据隐私、离线使用、安装更新、备份、发音与词表说明。">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">亩</span><span>半亩词田</span></a>
+    <nav class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="features.html">功能</a>
+      <a href="download.html">下载</a>
+      <a href="changelog.html">更新</a>
+      <a class="active" href="faq.html">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">FAQ</div>
+      <h1>常见问题</h1>
+      <p class="lead">安装、数据、发音和词表相关。没覆盖到的，反馈给分发者即可。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <details open>
+        <summary>学习数据会上传吗？</summary>
+        <p>不会。App 没有账号、没有网络请求，学习记录、录音和备份都在本机应用目录里。卸载会一并删除。</p>
+      </details>
+      <details>
+        <summary>需要联网才能用吗？</summary>
+        <p>安装后完全离线可用，单词音频随安装包提供。只有下载 APK 或查看发布页需要联网。</p>
+      </details>
+      <details>
+        <summary>支持 iPhone / iPad 吗？</summary>
+        <p>暂不支持，当前只有 Android 测试版。iOS 适配在以后的计划里，但没有时间表。</p>
+      </details>
+      <details>
+        <summary>怎么更新？会丢数据吗？</summary>
+        <p>下载新版 APK 后直接覆盖安装，学习数据会保留。跨大版本升级前建议先在「家长设置 → 立即备份」留一份。</p>
+      </details>
+      <details>
+        <summary>卸载重装后数据还在吗？</summary>
+        <p>不在。卸载会删除应用数据；如果之前导出过备份，重装后可以在「家长设置 → 从备份恢复」找回。</p>
+      </details>
+      <details>
+        <summary>发音不准确怎么办？</summary>
+        <p>音频是预生成的单音色（LJSpeech），常见词没问题，但多音词、人名地名可能读错。可以先用系统 TTS 兜底；后续会单独校对多音词。</p>
+      </details>
+      <details>
+        <summary>为什么高考是 3512 词，不是 3500？</summary>
+        <p>词表来自 ECDICT 的考纲标签，去掉派生词后是 3512 条，比通行说法多 12 条新课标补充。没有为了凑整数删除合法词。</p>
+      </details>
+      <details>
+        <summary>词表是官方授权的吗？</summary>
+        <p>不是。教材词表由社区整理，版权归人民教育出版社等权利人，当前仅限个人学习使用；不做商用再分发。</p>
+      </details>
+      <details>
+        <summary>孩子能自己改设置吗？</summary>
+        <p>不能。学生端只读，切换孩子、每日新词、备份恢复都在家长 PIN 后面。忘记 PIN 可以用恢复码重置。</p>
+      </details>
+      <details>
+        <summary>安装时提示“未知来源”怎么办？</summary>
+        <p>这是侧载安装的正常提示。在系统设置里允许当前浏览器或文件管理器安装应用即可；安装完可以关掉这个权限。</p>
+      </details>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap panel split">
+      <div>
+        <div class="eyebrow">反馈</div>
+        <h2>发现问题</h2>
+        <p class="lead" style="font-size:15px;">测试版难免有 bug。反馈时请带上手机型号、Android 版本、复现步骤；如果涉及数据，先导出备份再操作。</p>
+      </div>
+      <ul class="checks">
+        <li>安装失败：确认 Android 8.0+ 与安装权限</li>
+        <li>没有声音：检查媒体音量，或在家长设置里点「检查英文语音」</li>
+        <li>数据异常：先备份，再尝试恢复</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>半亩词田 · 家庭自用测试版</div>
+    <div><a href="index.html">首页</a> · <a href="download.html">下载</a> · <a href="changelog.html">更新日志</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

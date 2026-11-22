@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>下载 · 半亩词田</title>
+<meta name="description" content="下载半亩词田 Android 测试版 v0.19.0，查看安装步骤、校验值与更新说明。">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">亩</span><span>半亩词田</span></a>
+    <nav class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="features.html">功能</a>
+      <a class="active" href="download.html">下载</a>
+      <a href="changelog.html">更新</a>
+      <a href="faq.html">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Android 测试版</div>
+      <h1>下载 v0.19.0</h1>
+      <p class="lead">签名安装包约 74MB，包含 4694 个词的本地音频。下载后直接安装，无需注册。</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://github.com/elliotsu1107/banmu-releases/releases/latest">下载 APK</a>
+        <a class="btn btn-ghost" href="https://github.com/elliotsu1107/banmu-releases/releases/download/v0.19.0/banmu-v0.19.0-android.apk.sha256">SHA-256 校验文件</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid-2">
+      <div class="card">
+        <h3>文件信息</h3>
+        <p>
+          版本：v0.19.0<br>
+          文件名：<code>banmu-v0.19.0-android.apk</code><br>
+          大小：77,259,675 字节（约 74MB）<br>
+          签名：CN=Banmu<br>
+          最低系统：Android 8.0（API 26）
+        </p>
+      </div>
+      <div class="card">
+        <h3>安装步骤</h3>
+        <ol class="steps">
+          <li>用手机浏览器打开本页，点击「下载 APK」。</li>
+          <li>系统提示时，允许浏览器安装未知来源应用。</li>
+          <li>下载完成后点安装，打开「半亩词田」。</li>
+          <li>创建孩子档案，选词书，开始今天的学习。</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="notice">
+        这是测试版。升级可直接覆盖安装；卸载会删除本机学习记录，换机或重装前请先在「家长设置 → 备份」里导出备份。
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">校验</div>
+          <h2>确认安装包没被改过</h2>
+        </div>
+        <p>下载 APK 和同名 <code>.sha256</code> 文件后，在电脑上核对。Windows PowerShell：</p>
+      </div>
+      <div class="card">
+        <p style="font-family:ui-monospace,Consolas,monospace;color:var(--ink);">
+          Get-FileHash .\banmu-v0.19.0-android.apk -Algorithm SHA256
+        </p>
+        <p>输出的哈希应与 <code>.sha256</code> 文件第一段一致。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid-2">
+      <div class="card">
+        <h3>更新</h3>
+        <p>新版本直接下载并覆盖安装，学习数据会保留。跨大版本升级前仍建议先备份。</p>
+      </div>
+      <div class="card">
+        <h3>旧版本</h3>
+        <p>历史安装包在 <a href="https://github.com/elliotsu1107/banmu-releases/releases">发布记录</a> 中；一般只需要最新版。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>半亩词田 · 家庭自用测试版</div>
+    <div><a href="index.html">首页</a> · <a href="features.html">功能</a> · <a href="changelog.html">更新日志</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

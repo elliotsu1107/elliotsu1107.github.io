@@ -1,123 +1,130 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>半亩词田 · Android 测试版</title>
-<style>
-  :root {
-    --paper: #faf8f2;
-    --ink: #24312a;
-    --muted: #6f7b73;
-    --green: #4f7d5a;
-    --green-deep: #2f5a3b;
-    --line: #e4ded1;
-    --soft: #eef4ea;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
-    line-height: 1.7;
-  }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
-  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
-  .brand-mark {
-    width: 40px; height: 40px; border-radius: 12px;
-    background: var(--soft); color: var(--green-deep);
-    display: grid; place-items: center; font-weight: 700;
-  }
-  h1 { font-size: 32px; margin: 0; letter-spacing: 1px; }
-  .sub { color: var(--muted); margin: 4px 0 36px; }
-  .card {
-    background: #fff; border: 1px solid var(--line); border-radius: 18px;
-    padding: 24px; margin: 16px 0;
-  }
-  .download {
-    display: inline-block; background: var(--green); color: #fff;
-    text-decoration: none; padding: 14px 28px; border-radius: 14px;
-    font-weight: 600; font-size: 16px;
-  }
-  .download:hover { background: var(--green-deep); }
-  .meta { color: var(--muted); font-size: 13px; margin-top: 10px; }
-  h2 { font-size: 18px; margin: 0 0 10px; }
-  ol, ul { margin: 0; padding-left: 22px; }
-  li { margin: 4px 0; }
-  code {
-    background: var(--soft); padding: 2px 6px; border-radius: 6px;
-    font-size: 12px; word-break: break-all;
-  }
-  img.shot {
-    width: 100%; max-width: 300px; border-radius: 18px;
-    border: 1px solid var(--line); display: block; margin: 0 auto;
-  }
-  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  @media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
-  .muted { color: var(--muted); font-size: 13px; }
-  a { color: var(--green-deep); }
-  footer { margin-top: 36px; color: var(--muted); font-size: 12px; }
-</style>
+<title>半亩词田 · 每天种几个词</title>
+<meta name="description" content="半亩词田是给两个孩子做的英语单词打卡 App：人教小学到高中 4694 词，全部本地发音，离线可用，数据只存本机。">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<div class="wrap">
-  <div class="brand">
-    <div class="brand-mark">亩</div>
-    <h1>半亩词田</h1>
-  </div>
-  <p class="sub">每天种几个词，浇几个词。给两个孩子做的英语单词打卡 App。</p>
 
-  <div class="card">
-    <h2>Android 测试版 v0.19.0</h2>
-    <p class="muted">4694 词 · 全部本地发音 · 离线可用 · 数据只存本机</p>
-    <a class="download" href="https://github.com/elliotsu1107/banmu-releases/releases/latest">下载 APK</a>
-    <div class="meta">
-      约 74MB · Android 8.0+ · 需要允许安装未知来源应用
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">亩</span><span>半亩词田</span></a>
+    <nav class="nav-links">
+      <a class="active" href="index.html">首页</a>
+      <a href="features.html">功能</a>
+      <a href="download.html">下载</a>
+      <a href="changelog.html">更新</a>
+      <a href="faq.html">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Banmu · Android 测试版</div>
+        <h1>每天种几个词，<br>浇几个词。</h1>
+        <p class="lead">给两个孩子做的英语单词打卡 App。人教小学到高中 4694 词，全部本地发音，离线可用，学习数据只存本机。</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="download.html">下载测试版</a>
+          <a class="btn btn-ghost" href="features.html">看看功能</a>
+        </div>
+        <p class="lead" style="margin-top:18px;font-size:13px;">v0.19.0 · Android 8.0+ · 约 74MB · 无账号、无广告</p>
+      </div>
+      <div class="hero-art">
+        <div class="phone"><img src="assets/today.png" alt="半亩词田今日页"></div>
+        <div class="hero-badge"><b>4694</b> 词 · 离线发音</div>
+      </div>
     </div>
-    <div class="meta">
-      校验：<a href="https://github.com/elliotsu1107/banmu-releases/releases/download/v0.19.0/banmu-v0.19.0-android.apk.sha256">SHA-256 文件</a>
+  </section>
+
+  <section>
+    <div class="wrap stats">
+      <div class="stat"><b>4694</b><span>唯一词条</span></div>
+      <div class="stat"><b>22</b><span>教材 / 考纲</span></div>
+      <div class="stat"><b>100%</b><span>本地音频</span></div>
+      <div class="stat"><b>0</b><span>账号与上传</span></div>
     </div>
-  </div>
+  </section>
 
-  <div class="card">
-    <h2>安装</h2>
-    <ol>
-      <li>手机浏览器打开本页，下载 APK。</li>
-      <li>在系统提示中允许浏览器「安装未知应用」。</li>
-      <li>安装后打开「半亩词田」，创建孩子档案即可开始。</li>
-    </ol>
-    <p class="muted">升级时直接覆盖安装；卸载会删除本机学习数据，重要记录请先在「家长设置 → 备份」里导出。</p>
-  </div>
-
-  <div class="row">
-    <div class="card">
-      <h2>这一版有什么</h2>
-      <ul>
-        <li>每日打卡、FSRS 复习</li>
-        <li>人教小学/初中/高中 + 中考 1600 / 高考 3512</li>
-        <li>词田范围、单元突击</li>
-        <li>跟读录音、家长 PIN、备份恢复</li>
-      </ul>
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">每天一点</div>
+          <h2>不追求一次背很多</h2>
+        </div>
+        <p>每天 12 个新词，先把当天该浇的词复习完。种下去、浇下去，剩下的交给间隔重复。</p>
+      </div>
+      <div class="grid-3">
+        <div class="card"><div class="icon">种</div><h3>今日队列</h3><p>新词 + 到期复习自动排好，学完打卡，连续天数看得见。</p></div>
+        <div class="card"><div class="icon">浇</div><h3>FSRS 复习</h3><p>忘了、模糊、记得三档评分，按记忆曲线安排下次出现。</p></div>
+        <div class="card"><div class="icon">田</div><h3>按册选范围</h3><p>小学、初中、高中、中考、高考，选到单元，也能单元突击。</p></div>
+        <div class="card"><div class="icon">听</div><h3>本地发音</h3><p>每个词都有离线音频，不依赖手机语音引擎，也不联网。</p></div>
+        <div class="card"><div class="icon">读</div><h3>跟读回放</h3><p>新词要求录一遍、回放一遍才可评分，家长可 PIN 跳过。</p></div>
+        <div class="card"><div class="icon">家</div><h3>家长模式</h3><p>多孩子档案、每日新词、备份恢复；学生端只读。</p></div>
+      </div>
     </div>
-    <div class="card">
-      <h2>说明</h2>
-      <ul>
-        <li>测试版，功能与数据格式可能调整。</li>
-        <li>不联网、不上传学习数据。</li>
-        <li>词表仅限个人学习使用。</li>
-      </ul>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">界面</div>
+          <h2>纸白、苗绿、手绘圆角</h2>
+        </div>
+        <p>没有排行榜、没有积分商城。孩子看到的是今天要种的词，和一块慢慢长起来的田。</p>
+      </div>
+      <div class="shots">
+        <div class="shot"><img src="assets/today.png" alt="今日页"><span>今日：12 个新词</span></div>
+        <div class="shot"><img src="assets/books.png" alt="词田页"><span>词田：按册、按单元选范围</span></div>
+        <div class="shot"><img src="assets/reading.png" alt="跟读页"><span>跟读：录音后自动回放</span></div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="card">
-    <img class="shot" src="screenshot.png" alt="半亩词田今日页">
-    <p class="muted" style="text-align:center;margin:10px 0 0">今日页</p>
-  </div>
+  <section>
+    <div class="wrap">
+      <div class="panel split">
+        <div>
+          <div class="eyebrow">为什么做</div>
+          <h2>一个爸爸的私心</h2>
+          <p class="lead" style="font-size:15px;">市面上的背词 App 大多要账号、要联网、要内购。这个项目只想解决一件事：让孩子每天打开就能学，学完就关，数据留在家里。</p>
+        </div>
+        <ul class="checks">
+          <li>不注册、不登录、不上传</li>
+          <li>不联网也能完整使用</li>
+          <li>词库与音频随安装包带走</li>
+          <li>备份文件可导出，换机可恢复</li>
+          <li>学生端不能改设置，家长 PIN 管理</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    半亩词田 · 测试版发布页 · 安装包来自 <a href="https://github.com/elliotsu1107/banmu-releases">banmu-releases</a>
-  </footer>
-</div>
+  <section>
+    <div class="wrap" style="text-align:center;">
+      <h2>准备种下第一块田？</h2>
+      <p class="lead" style="margin:0 auto 22px;">Android 测试版，直接下载安装。遇到问题先看常见问题。</p>
+      <div class="actions" style="justify-content:center;">
+        <a class="btn btn-primary" href="download.html">下载 APK</a>
+        <a class="btn btn-ghost" href="faq.html">常见问题</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>半亩词田 · 家庭自用测试版</div>
+    <div><a href="changelog.html">更新日志</a> · <a href="download.html">下载</a> · <a href="faq.html">常见问题</a></div>
+  </div>
+</footer>
+
 </body>
 </html>
