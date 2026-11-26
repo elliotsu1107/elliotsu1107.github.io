@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>更新日志 · 半亩词田</title>
 <meta name="description" content="半亩词田 Android 测试版更新日志。">
-<link rel="icon" href="assets/icon.png"><link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
 <header class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="index.html"><span class="brand-mark">亩</span><span>半亩词田</span></a>
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><img src="assets/app-icon.png" alt="">半亩词田</a>
     <nav class="nav-links">
       <a href="index.html">首页</a>
       <a href="features.html">功能</a>
@@ -19,15 +20,16 @@
       <a class="active" href="changelog.html">更新</a>
       <a href="faq.html">常见问题</a>
     </nav>
+    <a class="nav-cta" href="download.html">下载测试版</a>
   </div>
 </header>
 
 <main>
-  <section class="hero">
+  <section class="page-hero">
     <div class="wrap">
       <div class="eyebrow">Changelog</div>
       <h1>更新日志</h1>
-      <p class="lead">测试版迭代记录。安装包永远以 <a href="download.html">下载页</a> 与 Release 为准。</p>
+      <p class="lead">测试版迭代记录。安装包永远以下载页与 Release 为准。</p>
     </div>
   </section>
 
@@ -36,57 +38,77 @@
       <ul class="timeline">
         <li>
           <div class="date">2026-11-22 · v0.19.2</div>
-          <h3>新图标与更新提示</h3>
-          <p>换成纸感四格田 + 嫩芽图标；启动时检查新版本并提示，家长设置可手动检查更新。</p>
+          <div>
+            <h3>新图标与更新提示</h3>
+            <p>换成纸感四格田 + 嫩芽图标；启动时检查新版本并提示，家长设置可手动检查更新。</p>
+          </div>
         </li>
         <li>
           <div class="date">2026-11-22 · v0.19.1</div>
-          <h3>图标与档案管理</h3>
-          <p>新增 App 图标；家长设置支持重命名、删除档案（至少保留一个）；修复词田底部按钮在真机上的溢出。</p>
+          <div>
+            <h3>图标与档案管理</h3>
+            <p>新增 App 图标；家长设置支持重命名、删除档案（至少保留一个）；修复词田底部按钮在真机上的溢出。</p>
+          </div>
         </li>
         <li>
           <div class="date">2026-11-22 · v0.19.0</div>
-          <h3>首个公开测试版</h3>
-          <p>正式签名与自动发版；App 名称改为「半亩词田」；高考词书按考纲 3512 条命名；公开 Release 与安装页上线。</p>
+          <div>
+            <h3>首个公开测试版</h3>
+            <p>正式签名与自动发版；App 名称改为「半亩词田」；高考词书按考纲 3512 条命名；公开 Release 与安装页上线。</p>
+          </div>
         </li>
         <li>
           <div class="date">2026-11-22 · v0.18.0</div>
-          <h3>考纲词库与全量发音</h3>
-          <p>中考换成 1600 考纲词、高考换成 3512 考纲词；全库 4694 词全部生成本地 Opus 音频，约 15MB，离线可用。</p>
+          <div>
+            <h3>考纲词库与全量发音</h3>
+            <p>中考换成 1600 考纲词、高考换成 3512 考纲词；全库 4694 词全部生成本地 Opus 音频，约 15MB，离线可用。</p>
+          </div>
         </li>
         <li>
           <div class="date">2026-11-21 · v0.17.x</div>
-          <h3>词库补全</h3>
-          <p>补全人教小学 8 册、初中 5 册、高中 2019 七册；加入中考/高考汇总；修复长书名在词书下拉框中的溢出。</p>
+          <div>
+            <h3>词库补全</h3>
+            <p>补全人教小学 8 册、初中 5 册、高中 2019 七册；加入中考/高考汇总；修复长书名在词书下拉框中的溢出。</p>
+          </div>
         </li>
         <li>
           <div class="date">2026-11-21 · v0.16.0</div>
-          <h3>本地发音</h3>
-          <p>接入 Piper + LJSpeech 预生成单词音频，本地优先、系统 TTS 兜底。</p>
+          <div>
+            <h3>本地发音</h3>
+            <p>接入 Piper + LJSpeech 预生成单词音频，本地优先、系统 TTS 兜底。</p>
+          </div>
         </li>
         <li>
           <div class="date">2026-11-21 · v0.15.x</div>
-          <h3>语音链路</h3>
-          <p>TTS 朗读、跟读录音与自动回放、麦克风拒绝降级、家长 PIN 跳过、英文语音检查。</p>
+          <div>
+            <h3>语音链路</h3>
+            <p>TTS 朗读、跟读录音与自动回放、麦克风拒绝降级、家长 PIN 跳过、英文语音检查。</p>
+          </div>
         </li>
       </ul>
     </div>
   </section>
 
-  <section>
-    <div class="wrap" style="text-align:center;">
-      <a class="btn btn-primary" href="download.html">下载最新版</a>
+  <section class="cta" style="padding-top:0;">
+    <div class="wrap">
+      <h2>下载最新版</h2>
+      <div class="actions"><a class="btn btn-primary" href="download.html">去下载</a></div>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap footer-inner">
-    <div>半亩词田 · 家庭自用测试版</div>
-    <div><a href="index.html">首页</a> · <a href="features.html">功能</a> · <a href="faq.html">常见问题</a></div>
+    <a class="brand" href="index.html"><img src="assets/app-icon.png" alt="">半亩词田</a>
+    <div class="footer-links">
+      <a href="index.html">首页</a>
+      <a href="features.html">功能</a>
+      <a href="download.html">下载</a>
+      <a href="faq.html">常见问题</a>
+    </div>
+    <div>v0.19.2 · 家庭自用测试版</div>
   </div>
 </footer>
 
 </body>
 </html>
-

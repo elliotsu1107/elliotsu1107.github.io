@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>常见问题 · 半亩词田</title>
 <meta name="description" content="半亩词田的常见问题：数据隐私、离线使用、安装更新、备份、发音与词表说明。">
-<link rel="icon" href="assets/icon.png"><link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
 <header class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="index.html"><span class="brand-mark">亩</span><span>半亩词田</span></a>
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><img src="assets/app-icon.png" alt="">半亩词田</a>
     <nav class="nav-links">
       <a href="index.html">首页</a>
       <a href="features.html">功能</a>
@@ -19,11 +20,12 @@
       <a href="changelog.html">更新</a>
       <a class="active" href="faq.html">常见问题</a>
     </nav>
+    <a class="nav-cta" href="download.html">下载测试版</a>
   </div>
 </header>
 
 <main>
-  <section class="hero">
+  <section class="page-hero">
     <div class="wrap">
       <div class="eyebrow">FAQ</div>
       <h1>常见问题</h1>
@@ -32,14 +34,14 @@
   </section>
 
   <section>
-    <div class="wrap">
+    <div class="wrap faq-grid">
       <details open>
         <summary>学习数据会上传吗？</summary>
-        <p>不会。App 没有账号、没有网络请求，学习记录、录音和备份都在本机应用目录里。卸载会一并删除。</p>
+        <p>不会。App 没有账号、没有统计上报，学习记录、录音和备份都在本机应用目录里。卸载会一并删除。</p>
       </details>
       <details>
         <summary>需要联网才能用吗？</summary>
-        <p>安装后完全离线可用，单词音频随安装包提供。只有下载 APK 或查看发布页需要联网。</p>
+        <p>安装后完全离线可用，单词音频随安装包提供。只有下载 APK、查看发布页和检查更新需要联网。</p>
       </details>
       <details>
         <summary>支持 iPhone / iPad 吗？</summary>
@@ -73,32 +75,47 @@
         <summary>安装时提示“未知来源”怎么办？</summary>
         <p>这是侧载安装的正常提示。在系统设置里允许当前浏览器或文件管理器安装应用即可；安装完可以关掉这个权限。</p>
       </details>
+      <details>
+        <summary>检查更新失败怎么办？</summary>
+        <p>更新检查依赖 GitHub Pages / API，部分网络访问不了会静默跳过，不影响离线学习。也可以直接打开下载页手动安装新版。</p>
+      </details>
+      <details>
+        <summary>跟读录音太短/太长？</summary>
+        <p>默认录 2 秒后自动停止并回放；录音过程中也可以点「停止并回放」提前结束，或录完后点「重录」。</p>
+      </details>
     </div>
   </section>
 
-  <section>
-    <div class="wrap panel split">
-      <div>
-        <div class="eyebrow">反馈</div>
-        <h2>发现问题</h2>
-        <p class="lead" style="font-size:15px;">测试版难免有 bug。反馈时请带上手机型号、Android 版本、复现步骤；如果涉及数据，先导出备份再操作。</p>
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="panel">
+        <div>
+          <div class="eyebrow">Feedback</div>
+          <h2>发现问题</h2>
+          <p class="lead" style="font-size:16px;margin-top:16px;">测试版难免有 bug。反馈时请带上手机型号、Android 版本、复现步骤；涉及数据时先导出备份再操作。</p>
+        </div>
+        <ul class="checks">
+          <li>安装失败：确认 Android 8.0+ 与安装权限</li>
+          <li>没有声音：检查媒体音量，或在家长设置里点「检查英文语音」</li>
+          <li>数据异常：先备份，再尝试恢复</li>
+        </ul>
       </div>
-      <ul class="checks">
-        <li>安装失败：确认 Android 8.0+ 与安装权限</li>
-        <li>没有声音：检查媒体音量，或在家长设置里点「检查英文语音」</li>
-        <li>数据异常：先备份，再尝试恢复</li>
-      </ul>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap footer-inner">
-    <div>半亩词田 · 家庭自用测试版</div>
-    <div><a href="index.html">首页</a> · <a href="download.html">下载</a> · <a href="changelog.html">更新日志</a></div>
+    <a class="brand" href="index.html"><img src="assets/app-icon.png" alt="">半亩词田</a>
+    <div class="footer-links">
+      <a href="index.html">首页</a>
+      <a href="features.html">功能</a>
+      <a href="download.html">下载</a>
+      <a href="changelog.html">更新日志</a>
+    </div>
+    <div>v0.19.2 · 家庭自用测试版</div>
   </div>
 </footer>
 
 </body>
 </html>
-
